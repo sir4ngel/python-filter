@@ -2,8 +2,11 @@ from operator import index
 import matplotlib.pyplot as plt 
 import pandas as pd
 from wordcloud import WordCloud, STOPWORDS
+import nltk
 from nltk.corpus import stopwords
 from collections import Counter
+
+nltk.download('stopwords')
 
 class Nube:
 
