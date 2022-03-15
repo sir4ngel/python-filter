@@ -29,7 +29,7 @@ class NeuralNetwork():
     def train(self, archivo, iterations):
         archivo = pd.read_csv(archivo)
         
-        entrada =  archivo[['cocina', 'chef', 'platillo', 'restaurante', 'mesero', 'comida', 'favorita']]
+        entrada =  archivo[['viajar', 'viaje', 'visitar', 'turista', 'turismo', 'comida', 'lugares']]
         salida = archivo[['salida']]
 
         training_set_inputs = entrada[:].values

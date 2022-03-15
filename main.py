@@ -1,6 +1,4 @@
 #Importamos la vista
-from ast import If
-from sklearn import neural_network
 from src.Cliente.Ventanas_ui import *
 from src.Modelo.Archivo import FichaArchivo
 from src.Utilidades.RedNeuronal import NeuralNetwork
@@ -168,27 +166,23 @@ class MainWindow(QtWidgets.QMainWindow, Ui_MainWindow):
         situacion = [0 for i in range(0, 7)]
         palabras = self.txPalabrasClave.text().split()
         for palabra in palabras:
-            if palabra == 'cocina':
+            if palabra == 'viajar':
                 situacion[0] = 1
-            elif palabra == 'chef':
+            elif palabra == 'viaje':
                 situacion[1] = 1
-            elif palabra == 'platillo':
+            elif palabra == 'visitar':
                 situacion[2] = 1
-            elif palabra == 'restaurante':
+            elif palabra == 'turista':
                 situacion[3] = 1
-            elif palabra == 'mesero':
+            elif palabra == 'turismo':
                 situacion[4] = 1
             elif palabra == 'comida':
                 situacion[5] = 1
-            elif palabra == 'favorita':
+            elif palabra == 'lugares':
                 situacion[6] = 1
             else:
                 print('La situación', palabra, 'no existe')
-        self.txRes.setText(np.array2string(self.red_neuronal.think(np.array(situacion))))
-
-        
-
-        
+        self.txRes.setText(np.array2string(self.red_neuronal.think(np.array(situacion)))) 
 
 
 if __name__ == "__main__":
